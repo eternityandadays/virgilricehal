@@ -1,0 +1,66 @@
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 页面整体样式 */
+body {
+  font-family: 'SF Mono', 'Menlo', 'Monaco', monospace; /* 参考网站的等宽字体 */
+  background-color: #ffffff; /* 白色背景 */
+  color: #333333; /* 深灰色文字 */
+  min-height: 100vh; /* 页面占满屏幕高度 */
+  display: flex; /* 居中布局核心 */
+  flex-direction: column;
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* 水平居中 */
+  padding: 20px;
+  line-height: 1.8; /* 行间距更舒适 */
+}
+
+/* 标题样式 */
+h1 {
+  font-size: 2.5rem; /* 大号标题 */
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* 副标题/简介样式 */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #666666; /* 浅灰色简介 */
+}
+
+/* 链接列表样式 */
+.links {
+  display: flex;
+  gap: 2rem; /* 链接之间的间距 */
+  flex-wrap: wrap; /* 手机端自动换行 */
+  justify-content: center;
+}
+
+/* 链接样式 */
+.links a {
+  color: #0066cc; /* 蓝色链接（参考网站配色） */
+  text-decoration: none; /* 去掉下划线 */
+  font-size: 1.1rem;
+  transition: color 0.3s; /* hover 渐变效果 */
+}
+
+/* 鼠标悬浮时变色 */
+.links a:hover {
+  color: #003399; /* 深一点的蓝色 */
+  text-decoration: underline; /* 悬浮显示下划线 */
+}
+
+/* 响应式：手机端适配 */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .links {
+    gap: 1.5rem;
+  }
+}
